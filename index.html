@@ -34,14 +34,6 @@
                         class="live-feed-image">
                 </div>
             </div>
-        </section><!-- Buy SCGT Section -->
-        <section id="buy-scgt">
-            <div class="container">
-                <h2>Invest in Sharia Coin Governance ($SCGT)</h2>
-                <p>Each SCGT token costs <strong>$1,000 USDC</strong> and grants you governance rights in the DAO, along
-                    with an airdrop of 1 million SHARIA tokens.</p>
-                <button class="btn" onclick="buySCGT()">Purchase 1 SCGT ($1000 USDC)</button>
-            </div>
         </section>
 
         <!-- Include Solana web3.js -->
@@ -49,7 +41,6 @@
         <script src="https://unpkg.com/@solana/spl-token@latest/lib/index.iife.js"></script>
 
 
-        <!-- Add this JavaScript before the closing </body> tag -->
         <script>
             async function fetchStreamflowData() {
                 try {
@@ -64,9 +55,9 @@
                 <p><strong>Project:</strong> ${data.projectName || 'SHARIA Coin'}</p>
                 <p><strong>Total Tokens:</strong> ${data.totalTokens || 'Not available'}</p>
                 <p><strong>Tokens Released:</strong> ${data.tokensReleased || 'Not available'}</p>
-                <p><strong>Next Release Date:</strong> ${data.nextRelease || 'Not available'}</p>
-            `;
-                } catch (error) {
+                <p><strong>Next Release Date:</strong> ${data.nextRelease || 'Not available'}</p>      `;
+                }
+                catch (error) {
                     document.getElementById("streamflow-data").innerHTML = `<p>Error loading data. Please try again later.</p>`;
                     console.error("Error fetching Streamflow data:", error);
                 }
@@ -81,10 +72,13 @@
 
         </div>
         <div>
-            <h3>Please select below how you would like to support the project.</h3>
+            <h3>Learn about differnt ways you could support the project.</h3>
             <div class="cta-buttons">
-                <a href="#buy" class="btn">Coming Soon: Invest & Govern</a>
-                <a href="#Donate" class="btn btn-alt">Coming Soon: Donate</a>
+                <a href="#buy" class="btn">Invest & Govern</a>
+                <a href="#Donate" class="btn btn-alt">Provide Initial Liquidity</a>
+                <a href="#Donate" class="btn btn-alt"> Donate</a>
+
+
             </div>
         </div>
     </header>
@@ -142,8 +136,10 @@
 
             <h2>Join us today!</h2>
             <div class="cta-buttons">
-                <a href="#buy" class="btn">Coming Soon: Invest & Govern</a>
-                <a href="#Donate" class="btn btn-alt">Coming Soon: Donate</a>
+                <button class="btn" onclick="buySCGT()">Invest & Govern</button>
+
+                <button class="btn" onclick="donateAndBurn()">Donate</button>
+
             </div>
         </div>
     </section>
@@ -172,7 +168,7 @@
             </ul>
             <!-- Tokenomics Image -->
             <div class="tokenomics-image">
-                <img src="tokenomicsPie3.png" alt="Sharia Coin Tokenomics Chart">
+                <img src="images/tokenomicsPie3.png" alt="Sharia Coin Tokenomics Chart">
             </div>
 
             <!-- Token Allocation Table -->
@@ -278,173 +274,216 @@
                 </li>
             </ul>
         </div>
-    </section>
-    <!-- Donate & Burn Section -->
-    <section id="donate">
-        <h2>🔥 Donate USDC & Automatically Burn SHARIA Tokens</h2>
-        <button class="btn" onclick="donateAndBurn()">Donate USDC & Burn SHARIA</button>
-    </section>
 
-    <!-- JavaScript Integration -->
-    <script>
-        const { Connection, PublicKey, clusterApiUrl, Transaction } = solanaWeb3;
+        <!-- Options to Support Section -->
 
-        const SHARIA_MINT = new PublicKey("FnpGBpqDLtzyUKmRDG1JneLBfY62v1iZtGiKqA3DaTFU");
-        const USDC_MINT = new PublicKey("Es9vMFrzaCER3CeP1VXkxNDTULeS8ZhV4EUdk2Q9KrXF");
-        const BURN_ADDRESS = new PublicKey("11111111111111111111111111111111");
-        // const DAO_USDC_WALLET = new PublicKey("YOUR_DAO_USDC_RECEIVING_ADDRESS");
-        const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+        <!-- Donate & Burn Section -->
+        <section id="donate">
+            <section id="buy-scgt">
+                <div class="container">
 
-        async function donateAndBurn() {
-            if (!window.solana) {
-                alert("Please install a Solana wallet like Phantom!");
-                return;
-            }
 
-            try {
-                const provider = window.solana;
-                await provider.connect();
+                    <h4>Why Donating Through Sharia Coin DAO Works Better:</h4>
+                    <p><strong>100% of your donation directly supports education, healthcare, and humanitarian relief
+                            for
+                            communities impacted by conflict in the Middle East. </strong>
+                    </p>
+                    <h2>No Intermediaries, No Delays, Complete Transparency.</h2>
 
-                const wallet = provider.publicKey;
-                const usdcAmount = parseFloat(prompt("Enter USDC amount to donate:", "10"));
-                if (isNaN(usdcAmount) || usdcAmount <= 0) {
-                    alert("Invalid donation amount!");
+                    <button class="btn" onclick="donateAndBurn()">Start Donating</button>
+                </div>
+            </section>
+            <p> </p>
+
+
+        </section>
+        <section id="invest" class="option1-section">
+            <div class="container">
+                <h2>Provide Liquidity</h2>
+                <p><strong>Buying and holding the Sharia Coins will not just make the project strong, but also reward you  upcoming airdrops and 50% of the earned transactions fees.</strong></p>
+                <p><strong>As per the other 50% of the earned transaction fees, 25% goes to the DAO's Treasury for the operating expanses, protocols developments, and future investments.  
+                    <br> The other 25% will be added to the Sadaqah Jariyah Fund to support the education, healthcare, and humanitarian relief for the communities impacted by conflict in the Middle East.</strong></p>
+
+                <button class="btn" onclick="buySCGT()">Buy $SHARIA</button>
+
+
+            </div>
+
+        </section>
+        <section id="govern" class="option2-section">
+            <div class="container">
+                <h2>Invest & Govern</h2>
+                <p><strong>Sharia Coin Governance Token, $SCGT, is the DAO's community.  
+                    <BR>There is a max supply of 20,000 $SCGT that have been minted. 
+                        <br>Only 10,000 are currently available for seed funding.  
+                        <br> <strong>Each $SCGT priced at $1,000 USDC.</strong>
+                    <br>$SCGT grants you governance/voting rights in the Sharia Coin DAO, along with profit sharing and
+                    <br>One Million SHARIA tokens have been reserved to be airdropped for each $SCGT.
+                </p>
+                <button class="btn" onclick="buySCGT()">Buy $SCGT</button>
+            </div>
+        </section>
+
+        <!-- JavaScript Integration -->
+        <script>
+            const { Connection, PublicKey, clusterApiUrl, Transaction } = solanaWeb3;
+
+            const SHARIA_MINT = new PublicKey("FnpGBpqDLtzyUKmRDG1JneLBfY62v1iZtGiKqA3DaTFU");
+            const USDC_MINT = new PublicKey("Es9vMFrzaCER3CeP1VXkxNDTULeS8ZhV4EUdk2Q9KrXF");
+            const BURN_ADDRESS = new PublicKey("11111111111111111111111111111111");
+            // const DAO_USDC_WALLET = new PublicKey("YOUR_DAO_USDC_RECEIVING_ADDRESS");
+            const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+
+            async function donateAndBurn() {
+                if (!window.solana) {
+                    alert("Please install a Solana wallet like Phantom!");
                     return;
                 }
 
-                const usdcDecimals = 6;
-                const shariaDecimals = 9;
-                const usdcLamports = usdcAmount * (10 ** usdcDecimals);
-                const shariaAmountToBurn = usdcAmount * 1000; // 1 USDC = 1000 SHARIA
-                const shariaLamports = shariaAmountToBurn * (10 ** shariaDecimals);
+                try {
+                    const provider = window.solana;
+                    await provider.connect();
 
-                const fromUsdcAccount = await splToken.getAssociatedTokenAddress(USDC_MINT, wallet);
-                const fromShariaAccount = await splToken.getAssociatedTokenAddress(SHARIA_MINT, wallet);
-                const burnShariaAccount = await splToken.getAssociatedTokenAddress(SHARIA_MINT, BURN_ADDRESS);
-                const daoUsdcAccount = await splToken.getAssociatedTokenAddress(USDC_MINT, DAO_USDC_WALLET);
+                    const wallet = provider.publicKey;
+                    const usdcAmount = parseFloat(prompt("Enter USDC amount to donate:", "10"));
+                    if (isNaN(usdcAmount) || usdcAmount <= 0) {
+                        alert("Invalid donation amount!");
+                        return;
+                    }
 
-                let tx = new Transaction();
+                    const usdcDecimals = 6;
+                    const shariaDecimals = 9;
+                    const usdcLamports = usdcAmount * (10 ** usdcDecimals);
+                    const shariaAmountToBurn = usdcAmount * 1000; // 1 USDC = 1000 SHARIA
+                    const shariaLamports = shariaAmountToBurn * (10 ** shariaDecimals);
 
-                tx.add(
-                    splToken.createTransferInstruction(
-                        fromUsdcAccount,
-                        daoUsdcAccount,
-                        wallet,
-                        usdcLamports
-                    )
-                );
+                    const fromUsdcAccount = await splToken.getAssociatedTokenAddress(USDC_MINT, wallet);
+                    const fromShariaAccount = await splToken.getAssociatedTokenAddress(SHARIA_MINT, wallet);
+                    const burnShariaAccount = await splToken.getAssociatedTokenAddress(SHARIA_MINT, BURN_ADDRESS);
+                    const daoUsdcAccount = await splToken.getAssociatedTokenAddress(USDC_MINT, DAO_USDC_WALLET);
 
-                tx.add(
-                    splToken.createTransferInstruction(
-                        fromShariaAccount,
-                        burnShariaAccount,
-                        wallet,
-                        shariaLamports
-                    )
-                );
+                    let tx = new Transaction();
 
-                tx.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
-                tx.feePayer = wallet;
+                    tx.add(
+                        splToken.createTransferInstruction(
+                            fromUsdcAccount,
+                            daoUsdcAccount,
+                            wallet,
+                            usdcLamports
+                        )
+                    );
 
-                const signedTx = await provider.signTransaction(tx);
-                const signature = await connection.sendRawTransaction(signedTx.serialize());
+                    tx.add(
+                        splToken.createTransferInstruction(
+                            fromShariaAccount,
+                            burnShariaAccount,
+                            wallet,
+                            shariaLamports
+                        )
+                    );
 
-                await connection.confirmTransaction(signature, "confirmed");
+                    tx.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
+                    tx.feePayer = wallet;
 
-                alert(`🎉 Donation of ${usdcAmount} USDC successful!\n🔥 Burned ${shariaAmountToBurn} SHARIA.\nTransaction ID: ${signature}`);
+                    const signedTx = await provider.signTransaction(tx);
+                    const signature = await connection.sendRawTransaction(signedTx.serialize());
 
-            } catch (error) {
-                console.error(error);
-                alert("Transaction failed: " + error.message);
+                    await connection.confirmTransaction(signature, "confirmed");
+
+                    alert("🎉 Donation of " + usdcAmount + " USDC successful!\n🔥 Burned " + shariaAmountToBurn + " SHARIA.\nTransaction ID: " + signature);
+
+                } catch (error) {
+                    console.error(error);
+                    alert("Transaction failed: " + error.message);
+                }
             }
-        }
-    </script>
+        </script>
 
-    <script>
-        // const USDC_MINT = new solanaWeb3.PublicKey("Es9vMFrzaCER3CeP1VXkxNDTUL"); // Use real USDC mint address
-        const DAO_USDC_WALLET = new solanaWeb3.PublicKey("YOUR_DAO_USDC_WALLET_ADDRESS"); // Replace with your USDC wallet address
-        const SCGT_MINT = new solanaWeb3.PublicKey("YOUR_SCGT_MINT_ADDRESS"); // SCGT Mint Address
-        const DAO_SCGT_WALLET = new solanaWeb3.PublicKey("DAO_SCGT_HOLDER_WALLET_ADDRESS"); // Your wallet holding SCGT tokens
+        <script>
+            // const USDC_MINT = new solanaWeb3.PublicKey("Es9vMFrzaCER3CeP1VXkxNDTUL"); // Use real USDC mint address
+            const DAO_USDC_WALLET = new solanaWeb3.PublicKey("YOUR_DAO_USDC_WALLET_ADDRESS"); // Replace with your USDC wallet address
+            const SCGT_MINT = new solanaWeb3.PublicKey("YOUR_SCGT_MINT_ADDRESS"); // SCGT Mint Address
+            const DAO_SCGT_WALLET = new solanaWeb3.PublicKey("DAO_SCGT_HOLDER_WALLET_ADDRESS"); // Your wallet holding SCGT tokens
 
-        async function buySCGT() {
-            if (!window.solana) {
-                alert("Please install the Phantom wallet extension.");
-                return;
+            async function buySCGT() {
+                if (!window.solana) {
+                    alert("Please install the Phantom wallet extension.");
+                    return;
+                }
+
+                try {
+                    await window.solana.connect();
+                    const wallet = window.solana.publicKey;
+
+                    // Define amounts
+                    const usdcDecimals = 6;
+                    const scgtDecimals = 0; // SCGT typically 0 decimals (1 SCGT = 1 Token)
+                    const usdcAmount = 1000;
+                    const usdcLamports = usdcAmount * (10 ** usdcDecimals);
+
+                    const buyerUSDCAccount = await splToken.getAssociatedTokenAddress(USDC_MINT, wallet);
+                    const daoUSDCAccount = await splToken.getAssociatedTokenAddress(USDC_MINT, DAO_USDC_WALLET);
+
+                    const daoSCGTAccount = await splToken.getAssociatedTokenAddress(SCGT_MINT, DAO_SCGT_HOLDER_WALLET);
+                    const buyerSCGTAccount = await splToken.getAssociatedTokenAddress(SCGT_MINT, wallet);
+
+                    let transaction = new Transaction();
+
+                    // Transfer 1000 USDC from buyer to DAO
+                    transaction.add(
+                        splToken.createTransferInstruction(
+                            buyerUSDCAccount,
+                            daoUSDCAccount,
+                            wallet,
+                            usdcLamports,
+                            [],
+                            splToken.TOKEN_PROGRAM_ID
+                        )
+                    );
+
+                    // Transfer 1 SCGT from DAO to buyer
+                    transaction.add(
+                        splToken.createTransferInstruction(
+                            daoSCGTAccount,
+                            buyerSCGTAccount,
+                            DAO_SCGT_HOLDER_WALLET,
+                            1 * (10 ** scgtDecimals),
+                            [],
+                            splToken.TOKEN_PROGRAM_ID
+                        )
+                    );
+
+                    transaction.feePayer = wallet;
+                    transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
+
+                    // User signs the transaction (USDC transfer)
+                    const signedTransaction = await window.solana.signTransaction(transaction);
+
+                    // Send transaction
+                    const txId = await connection.sendRawTransaction(signedTransaction.serialize());
+                    await connection.confirmTransaction(txId, "confirmed");
+
+                    alert("🎉 Successfully purchased 1 SCGT token!\nTransaction ID: " + signedTransaction.signature);
+                } catch (error) {
+                    console.error(error);
+                    alert("Transaction failed: " + error.message);
+                }
             }
-
-            try {
-                await window.solana.connect();
-                const wallet = window.solana.publicKey;
-
-                // Define amounts
-                const usdcDecimals = 6;
-                const scgtDecimals = 0; // SCGT typically 0 decimals (1 SCGT = 1 Token)
-                const usdcAmount = 1000;
-                const usdcLamports = usdcAmount * (10 ** usdcDecimals);
-
-                const buyerUSDCAccount = await splToken.getAssociatedTokenAddress(USDC_MINT, wallet);
-                const daoUSDCAccount = await splToken.getAssociatedTokenAddress(USDC_MINT, DAO_USDC_WALLET);
-
-                const daoSCGTAccount = await splToken.getAssociatedTokenAddress(SCGT_MINT, DAO_SCGT_HOLDER_WALLET);
-                const buyerSCGTAccount = await splToken.getAssociatedTokenAddress(SCGT_MINT, wallet);
-
-                let transaction = new Transaction();
-
-                // Transfer 1000 USDC from buyer to DAO
-                transaction.add(
-                    splToken.createTransferInstruction(
-                        buyerUSDCAccount,
-                        daoUSDCAccount,
-                        wallet,
-                        usdcLamports,
-                        [],
-                        splToken.TOKEN_PROGRAM_ID
-                    )
-                );
-
-                // Transfer 1 SCGT from DAO to buyer
-                transaction.add(
-                    splToken.createTransferInstruction(
-                        daoSCGTAccount,
-                        buyerSCGTAccount,
-                        DAO_SCGT_HOLDER_WALLET,
-                        1 * (10 ** scgtDecimals),
-                        [],
-                        splToken.TOKEN_PROGRAM_ID
-                    )
-                );
-
-                transaction.feePayer = wallet;
-                transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
-
-                // User signs the transaction (USDC transfer)
-                const signedTransaction = await window.solana.signTransaction(transaction);
-
-                // Send transaction
-                const txId = await connection.sendRawTransaction(signedTransaction.serialize());
-                await connection.confirmTransaction(txId, "confirmed");
-
-                alert(`🎉 Successfully purchased 1 SCGT token!\nTransaction ID: ${signedTransaction.signature}`);
-            } catch (error) {
-                console.error(error);
-                alert("Transaction failed: " + error.message);
-            }
-        }
-    </script>
+        </script>
 
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>Follow us:</p>
-            <div class="social-links">
-                <a href="https://x.com/ShariaCoinDAO">Twitter</a>
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p>Follow us:</p>
+                <div class="social-links">
+                    <a href="https://x.com/ShariaCoinDAO">Twitter</a>
+                </div>
+                <p>&copy; 2025 Sharia Coin DAO. All rights reserved.Sharia Coin DAO and all its related products and
+                    intellectual properties are owned, operated, and managed by <a
+                        href="https://blokketensolutions.com">Blokketen Solutions </a> </p>
             </div>
-            <p>&copy; 2025 Sharia Coin DAO. All rights reserved.Sharia Coin DAO and all its related products and
-                intellectual properties are owned, operated, and managed by <a
-                    href="https://blokketensolutions.com">Blokketen Solutions </a> </p>
-        </div>
-    </footer>
+        </footer>
 </body>
 
 </html>

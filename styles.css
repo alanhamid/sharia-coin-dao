@@ -333,13 +333,13 @@ footer {
 
 /* Social Links */
 .social-links a {
-    color: #c09966;
+    color: #e9e4df;
     margin: 0 10px;
     text-decoration: none;
 }
 
 .social-links a:hover {
-    color: #a3774e;
+    color: #ee7707;
 }
 
 /* ================================= */
@@ -451,4 +451,32 @@ footer {
 
 .btn:hover {
     background: #d1a537;
+}
+/* ================================= */
+/* ✅ Options Section */
+/* ================================= */
+
+.option1-section {
+    background: linear-gradient(120deg, #1a2a6c, #b21f1f, #fdbb2d);;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.option1-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Scheherazade New', serif;
+    color: #dfdeeb;
+}
+.option2-section {
+    background: linear-gradient(120deg,  #fdbb2d, #b21f1f,  #1a2a6c);;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.option2-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Scheherazade New', serif;
+    color: #dfdeeb;
 }
