@@ -149,7 +149,6 @@ tr:hover {
 }
 
 .economic-features li::before {
-    content: "•";
     color: #01796F;
 }
 
