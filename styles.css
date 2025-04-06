@@ -6,20 +6,16 @@ html,
 body {
     font-family: 'Tajawal', sans-serif;
     background: #F9F5EE;
-    color: : #5C5346; /* Earthy brown for readability */
+    color: #5C5346; /* Earthy brown for readability */
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    /* Fix for stretched screen issue */
     width: 100%;
 }
 
-/* ✅ Ensure Content Stays Within a Centered Container */
 .container {
     max-width: 1200px;
-    /* Prevents layout stretching */
     width: 90%;
-    /* Ensures responsiveness */
     margin: 0 auto;
     padding: 20px;
 }
@@ -30,17 +26,10 @@ body {
 
 h1,
 h2,
-h3 {
-    font-family: 'Scheherazade New', serif;
-    color: #f4c542;
-    /* Golden yellow for high contrast */
-    text-align: center;
-}
-
+h3,
 h4 {
     font-family: 'Scheherazade New', serif;
-    color: #FFFFFF;
-    font-size: 2.5rem;
+    color: #01796F; /* Islamic traditional green */
     text-align: center;
 }
 
@@ -48,18 +37,9 @@ p,
 ul,
 li {
     font-size: 1.1rem;
-    color: #fff;
+    color: #5C5346;
     line-height: 1.8;
     text-align: center;
-}
-
-/* ✅ Text Shadow for Readability */
-h1,
-h2,
-h3,
-h4,
-p {
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 }
 
 /* ================================= */
@@ -67,8 +47,8 @@ p {
 /* ================================= */
 
 .btn {
-    background: #f4c542;
-    color: #1a2a6c;
+    background: #01796F;
+    color: #F9F5EE;
     padding: 12px 25px;
     border-radius: 5px;
     text-decoration: none;
@@ -79,7 +59,7 @@ p {
 }
 
 .btn:hover {
-    background: #d1a537;
+    background: #004E48;
 }
 
 /* ================================= */
@@ -89,12 +69,7 @@ p {
 .hero {
     text-align: center;
     padding: 50px 0;
-}
-
-.hero-content,
-.hero-image {
-    max-width: 100%;
-    margin: auto;
+    background: #EFE6D8;
 }
 
 .hero-image img {
@@ -107,39 +82,14 @@ p {
 /* ================================= */
 
 .about-section {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(227, 208, 178, 0.5);
     padding: 50px 20px;
     text-align: center;
 }
 
-.about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-family: 'Scheherazade New', serif;
-    color: #f4c542;
-}
-
-.mission-list {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-.mission-list li {
-    font-size: 1.1rem;
-    color: #fff;
-    padding: 10px 0;
-    line-height: 1.6;
-    display: flex;
-    align-items: flex-start;
-}
-
 .mission-list li::before {
-
     font-size: 1.3rem;
-    color: #f4c542;
+    color: #01796F;
     margin-right: 10px;
 }
 
@@ -149,174 +99,58 @@ p {
 
 .tokenomics-section {
     background: transparent;
-    /* Matches body background */
     padding: 50px 0;
     text-align: center;
 }
 
-.tokenomics-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-family: 'Scheherazade New', serif;
-    color: #f4c542;
-}
-
-/* ✅ Tokenomics Image */
 .tokenomics-image img {
     width: 100%;
     max-width: 1000px;
     border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
+    box-shadow: 0px 5px 15px rgba(1, 121, 111, 0.5);
     margin-bottom: 20px;
 }
 
-/* ✅ Table Styles - Responsive & Readable */
-/* ✅ Responsive Table Fix */
-.table-container {
-    overflow-x: auto;
-    /* Enables horizontal scrolling on small screens */
-    max-width: 100%;
-}
-
-/* ✅ Table Layout Fix */
 table {
     width: 100%;
     border-collapse: collapse;
     background: #fff;
-    color: #222;
+    color: #5C5346;
     margin: 20px 0;
     border-radius: 8px;
     overflow: hidden;
-    display: table;
     table-layout: fixed;
-    /* Ensures even column distribution */
 }
 
-/* ✅ Adjust column widths */
 th,
 td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-    white-space: normal;
-    /* Allows text to wrap properly */
     word-wrap: break-word;
-    /* Ensures text does not overflow */
 }
-
-/* ✅ Ensure proper width distribution */
-th:nth-child(1),
-td:nth-child(1) {
-    width: 20%;
-}
-
-/* Category */
-th:nth-child(2),
-td:nth-child(2) {
-    width: 10%;
-}
-
-/* % of Supply */
-th:nth-child(3),
-td:nth-child(3) {
-    width: 15%;
-}
-
-/* Tokens Allocated */
-th:nth-child(4),
-td:nth-child(4) {
-    width: 25%;
-}
-
-/* Purpose */
-th:nth-child(5),
-td:nth-child(5) {
-    width: 30%;
-}
-
-/* Vesting & Release Details */
-
-/* ✅ Table Header */
-th {
-    background: #6b4226;
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* ✅ Improve readability for long text */
-td {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* ✅ Responsive Design */
-@media (max-width: 1024px) {
-
-    th,
-    td {
-        font-size: 0.9rem;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .table-container {
-        display: block;
-        overflow-x: auto;
-        width: 100%;
-    }
-
-    table {
-        display: block;
-        width: 100%;
-    }
-
-    th,
-    td {
-        font-size: 0.9rem;
-        padding: 8px;
-        white-space: nowrap;
-        /* Prevents text from wrapping excessively on small screens */
-    }
-}
-
 
 th {
-    background: #6b4226;
+    background: #01796F;
     color: #fff;
 }
 
 tr:hover {
-    background: rgba(255, 215, 0, 0.2);
+    background: rgba(1, 121, 111, 0.1);
 }
 
 /* ================================= */
 /* ✅ Additional Economic Features */
 /* ================================= */
 
-.economic-features {
-    background: #000000;
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
 .economic-features li {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    padding: 10px;
-    background: rgba(255, 215, 0, 0.1);
+    background: rgba(1, 121, 111, 0.1);
     border-radius: 5px;
-    line-height: 1.6;
 }
 
 .economic-features li::before {
-    content: " ";
-    font-size: 1.3rem;
-    color: #f4c542;
+    content: "•";
+    color: #01796F;
 }
 
 /* ================================= */
@@ -324,158 +158,32 @@ tr:hover {
 /* ================================= */
 
 footer {
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
+    background: rgba(227, 208, 178, 0.7);
+    color: #5C5346;
     text-align: center;
     padding: 20px;
 }
 
-/* Social Links */
 .social-links a {
-    color: #e9e4df;
+    color: #01796F;
     margin: 0 10px;
     text-decoration: none;
 }
 
 .social-links a:hover {
-    color: #ee7707;
+    color: #004E48;
 }
 
 /* ================================= */
 /* ✅ Responsive Design Fixes */
 /* ================================= */
 
-@media (max-width: 1024px) {
-    .container {
-        width: 95%;
-    }
-
-    .table-container {
-        overflow-x: auto;
-    }
-
-    table {
-        font-size: 0.9rem;
-    }
-
-    th,
-    td {
-        padding: 8px;
-    }
-}
-
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2rem;
     }
-
-    .hero-image img {
-        width: 90%;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
     .btn {
         padding: 10px 18px;
         font-size: 1rem;
     }
-
-    .economic-features {
-        text-align: center;
-    }
-}
-
-/* Live Feed Section */
-.live-feed-section {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.live-feed-section h2 {
-    font-size: 2rem;
-    color: #f4c542;
-    margin-bottom: 15px;
-}
-
-.live-feed-section p {
-    font-size: 1.1rem;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.live-feed-container {
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
-}
-
-/* Live Feed Placeholder Section */
-.image-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.live-feed-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
-}
-
-#buy-scgt {
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    text-align: center;
-    font-family: 'Amiri', serif;
-}
-
-.btn {
-    background: #f4c542;
-    color: #000;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    font-size: 1rem;
-}
-
-.btn:hover {
-    background: #d1a537;
-}
-/* ================================= */
-/* ✅ Options Section */
-/* ================================= */
-
-.option1-section {
-    background: linear-gradient(120deg, #1a2a6c, #b21f1f, #fdbb2d);;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.option1-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-family: 'Scheherazade New', serif;
-    color: #dfdeeb;
-}
-.option2-section {
-    background: linear-gradient(120deg,  #fdbb2d, #b21f1f,  #1a2a6c);;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.option2-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-family: 'Scheherazade New', serif;
-    color: #dfdeeb;
 }
