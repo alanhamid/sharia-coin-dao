@@ -456,7 +456,7 @@ footer {
 /* ================================= */
 
 .option1-section {
-    background: linear-gradient(120deg, #1a2a6c, #b21f1f, #fdbb2d);;
+    background: F9F5EE;
     padding: 50px 20px;
     text-align: center;
 }
@@ -468,7 +468,7 @@ footer {
     color: #5C5346;
 }
 .option2-section {
-    background: linear-gradient(120deg,  #fdbb2d, #b21f1f,  #1a2a6c);;
+    background: F9F5EE;
     padding: 50px 20px;
     text-align: center;
 }
