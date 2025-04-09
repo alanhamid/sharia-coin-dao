@@ -1,14 +1,13 @@
-/* ================================= */
-/* ✅ Global Website Background & Layout Fix */
-/* ================================= */
+/* styles.css */
+/* updated to look like same as bank of Sharia website. April 09,2025 */
 
 html,
 body {
-    font-family: 'Tajawal', sans-serif;
-    background: #F9F5EE;
-    color: : #5C5346; /* Earthy brown for readability */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #F9F5EE; /* Very soft neutral background */
+    color: #5C5346; /* Earthy brown for readability */
     overflow-x: hidden;
     /* Fix for stretched screen issue */
     width: 100%;
@@ -16,12 +15,54 @@ body {
 
 /* ✅ Ensure Content Stays Within a Centered Container */
 .container {
-    max-width: 1200px;
-    /* Prevents layout stretching */
     width: 90%;
-    /* Ensures responsiveness */
+    max-width: 1100px;
     margin: 0 auto;
+    max-width: 1200px;
     padding: 20px;
+}
+header {
+    background-color: #F9F5EE; 
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    height: 50px;
+    color: #01796F; /* Islamic traditional green */
+    font-weight: bold;
+}
+nav a {
+    color: #5C5346; /* Earthy brown text */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #01796F; /* Green on hover for accentuation */
+}
+
+.hero {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #EFE6D8; /* Slightly darker desert tone to complement green text */
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #01796F; /* Islamic green */
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.hero .tagline {
+    font-size: 18px;
+    margin-top: 20px;
 }
 
 /* ================================= */
@@ -105,18 +146,19 @@ p {
 /* ================================= */
 /* ✅ About Section */
 /* ================================= */
-
-.about-section {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 50px 20px;
+.about {
+    padding: 50px 0;
     text-align: center;
 }
 
-.about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-family: 'Scheherazade New', serif;
-    color: #f4c542;
+.about a {
+    color: #01796F; /* Islamic green links */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.about a:hover {
+    color: #004E48; /* Darker green for hover */
 }
 
 .mission-list {
@@ -478,4 +520,11 @@ footer {
     margin-bottom: 20px;
     font-family: 'Scheherazade New', serif;
     color: #5C5346;
+}
+footer {
+    background-color: #E3D0B2;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
 }
