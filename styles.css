@@ -198,4 +198,17 @@ footer a:hover {
     margin-bottom: 10px;
   }
 }
+.blank-section img {
+  display: block;
+  max-width: 50%;
+  min-width: 200px;  /* Prevents the image from shrinking too much */
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+@media (max-width: 600px) {
+  .blank-section img {
+    max-width: 80%;
+  }
+}
 
