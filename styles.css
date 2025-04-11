@@ -3,10 +3,12 @@
 
 html,
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #F9F5EE; /* Very soft neutral background */
+  <!--  background-color: #F9F5EE; /* Very soft neutral background */ -->
     color: #5C5346; /* Earthy brown for readability */
     overflow-x: hidden;
     /* Fix for stretched screen issue */
