@@ -31,8 +31,9 @@ header {
 .logo {
     height: 50px;
     color: #01796F; /* Islamic traditional green */
+     align-items: center;
     font-weight: bold;
-}
+ }
 
 nav a {
     color: #5C5346; /* Earthy brown text */
