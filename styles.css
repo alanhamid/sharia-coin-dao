@@ -171,19 +171,4 @@ footer a:hover {
     margin-bottom: 10px;
   }
 }
-"""
 
-# Save styles.css
-with open(os.path.join(base_dir, "styles.css"), "w", encoding="utf-8") as f:
-    f.write(styles_css_content)
-
-# Create and zip the deployment package
-zip_path = "/mnt/data/Bank_of_Sharia_Website_Deployment_Package.zip"
-with zipfile.ZipFile(zip_path, 'w') as zipf:
-    for root, _, files in os.walk(base_dir):
-        for file in files:
-            file_path = os.path.join(root, file)
-            arcname = os.path.relpath(file_path, base_dir)
-            zipf.write(file_path, arcname=arcname)
-
-zip_path
