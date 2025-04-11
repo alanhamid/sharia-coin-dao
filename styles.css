@@ -1,3 +1,5 @@
+
+
 html, body {
   font-family: 'Roboto', sans-serif;
   color: #444;
@@ -8,21 +10,40 @@ html, body {
   overflow-x: hidden;
   width: 100%;
 }
+/* Centered logo layout with side links */
+.nav-bar-alt {
+  position: relative;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-links {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.left-links a {
+  margin-right: 15px;
+  font-weight: bold;
+  color: #5C5346;
+}
+.left-links a:hover {
+  color: #01796F;
+}
+.logo-centered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 60px;
+}
+
 .container {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
-}
-header.main-header {
-  background-color: #F9F5EE;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header .logo {
-  height: 60px;
 }
 header h1 {
   font-size: 1.5rem;
