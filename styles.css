@@ -35,7 +35,7 @@ header {
      align-items: center;
     font-weight: bold;
  }
-h1, h2, h3 {
+h1, h2, h3, h5 {
     margin-bottom: 15px;
 }
 h1 {
@@ -50,7 +50,11 @@ h1 span {
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3);
 }
-
+h5{
+    font-size: 20px;
+    text-align: left;
+    color: #f4c542;
+}
 a {
     text-decoration: none;
     color: inherit;
