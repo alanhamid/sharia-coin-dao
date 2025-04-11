@@ -20,7 +20,6 @@ body {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
-    max-width: 1200px;
     padding: 20px;
 }
 header {
@@ -31,7 +30,7 @@ header {
     justify-content: space-between;
 }
 .logo {
-    height: 100px;
+    height: 50px;
     color: #01796F; /* Islamic traditional green */
      align-items: center;
     font-weight: bold;
@@ -522,7 +521,7 @@ footer {
 /* ================================= */
 
 .option1-section {
-    background: F9F5EE;
+    background: #F9F5EE;
     padding: 50px 20px;
     text-align: center;
 }
@@ -534,7 +533,7 @@ footer {
     color: #5C5346;
 }
 .option2-section {
-    background: F9F5EE;
+    background: #F9F5EE;
     padding: 50px 20px;
     text-align: center;
 }
