@@ -51,10 +51,11 @@ header h1 {
   margin-left: 15px;
   text-align: center;
 }
-span {
-  color: #DAA520; /* Goldenrod */
+h1 span {
+  background: linear-gradient(45deg, #FFD700, #FFC107, #DAA520);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
 nav a {
   color: #5C5346;
   text-decoration: none;
