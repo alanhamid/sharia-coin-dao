@@ -1,4 +1,4 @@
-
+/* Updated on April 11, 2025 */
 
 html, body {
   font-family: 'Roboto', sans-serif;
@@ -121,7 +121,7 @@ ul, li {
 }
 .tokenomics-image img {
   width: 100%;
-  max-width: 900px;
+  max-width: 500px;
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
   margin-bottom: 20px;
