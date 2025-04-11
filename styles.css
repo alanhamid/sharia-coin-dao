@@ -1,5 +1,3 @@
-# Since we cannot retrieve from canvas here, redefine styles.css based on latest update
-styles_css_content = """
 html, body {
   font-family: 'Roboto', sans-serif;
   color: #444;
