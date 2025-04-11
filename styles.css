@@ -1,558 +1,191 @@
-/* styles.css */
-/* updated to look like same as bank of Sharia website. April 09,2025 */
-
-html,
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #444;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  <!--  background-color: #F9F5EE; /* Very soft neutral background */ -->
-    color: #5C5346; /* Earthy brown for readability */
-    overflow-x: hidden;
-    /* Fix for stretched screen issue */
-    width: 100%;
+# Since we cannot retrieve from canvas here, redefine styles.css based on latest update
+styles_css_content = """
+html, body {
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #5C5346;
+  overflow-x: hidden;
+  width: 100%;
 }
-
-/* ✅ Ensure Content Stays Within a Centered Container */
 .container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
 }
-header {
-    background-color: #F9F5EE; 
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+header.main-header {
+  background-color: #F9F5EE;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.logo {
-    height: 50px;
-    color: #01796F; /* Islamic traditional green */
-     align-items: center;
-    font-weight: bold;
- }
-h1, h2, h3, h5 {
-    margin-bottom: 15px;
+header .logo {
+  height: 60px;
 }
-h1 {
-    font-size: 36px;
-    text-align: center;
-    color: #333;
+header h1 {
+  font-size: 1.5rem;
+  color: #01796F;
+  margin-left: 15px;
+  text-align: center;
 }
-
-h1 span {
-    background: linear-gradient(45deg, #FFD700, #FFC107, #DAA520, #FFD700);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3);
-}
-h5{
-    font-size: 20px;
-    text-align: center;
-    color: #6b4226;
-}
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 nav a {
-    color: #5C5346; /* Earthy brown text */
-    text-decoration: none;
-    font-weight: bold;
+  color: #5C5346;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
 }
-
 nav a:hover {
-    color: #01796F; /* Green on hover for accentuation */
+  color: #01796F;
 }
-
-.hero {
-    padding: 80px 0;
-    text-align: center;
-    background-color: #EFE6D8; /* Slightly darker desert tone to complement green text */
+h1, h2, h3, h4, h5 {
+  font-family: 'Scheherazade New', serif;
+  text-align: center;
+  color: #01796F;
+  margin-bottom: 15px;
 }
-
-.hero h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
-    color: #01796F; /* Islamic green */
-}
-
-.hero h2 {
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-
-.hero .tagline {
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-/* ================================= */
-/* ✅ Typography & Text Enhancements */
-/* ================================= */
-
-h1,
-h2,
-h3 {
-    font-family: 'Scheherazade New', serif;
-    color: #01796F; /* Islamic traditional green */
-    /* Golden yellow for high contrast */
-    text-align: center;
-}
-
-h4 {
-    font-family: 'Scheherazade New', serif;
-    color: #01796F; /* Islamic traditional green */
-    font-size: 2.5rem;
-    text-align: center;
-}
-
-p,
-ul,
-li {
-    font-size: 1.1rem;
-    color: #01796F; /* Islamic traditional green */
-    line-height: 1.8;
-    text-align: center;
-}
-
-/* ✅ Text Shadow for Readability */
-h1,
-h2,
-h3,
-h4,
 p {
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  font-size: 1.1rem;
+  color: #5C5346;
+  line-height: 1.8;
+  text-align: left;
 }
-
-/* ================================= */
-/* ✅ Buttons - Improved Visibility */
-/* ================================= */
-
+ul, li {
+  font-size: 1.1rem;
+  color: #5C5346;
+  text-align: left;
+  line-height: 1.6;
+}
 .btn {
-    background: #f4c542;
-    color: #1a2a6c;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  background: #f4c542;
+  color: #1a2a6c;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
-
 .btn:hover {
-    background: #d1a537;
+  background: #d1a537;
 }
-
-/* ================================= */
-/* ✅ Hero Section Fixes */
-/* ================================= */
-
-.hero {
-    text-align: center;
-    padding: 50px 0;
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
 }
-
-.hero-content,
-.hero-image {
-    max-width: 100%;
-    margin: auto;
+.two-column .hero-text, .two-column .hero-image {
+  flex: 1;
+  min-width: 300px;
 }
-
 .hero-image img {
-    max-width: 100%;
-    max-width: 500px;
-    height: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
-
-/* ================================= */
-/* ✅ About Section */
-/* ================================= */
-.about {
-    padding: 50px 0;
-    text-align: center;
+.hero {
+  background-color: #EFE6D8;
+  padding: 60px 0;
 }
-
-.about a {
-    color: #01796F; /* Islamic green links */
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.about a:hover {
-    color: #004E48; /* Darker green for hover */
-}
-
-.mission-list {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-.mission-list li {
-    font-size: 1.1rem;
-    color: #fff;
-    padding: 10px 0;
-    line-height: 1.6;
-    display: flex;
-    align-items: flex-start;
-}
-
-.mission-list li::before {
-
-    font-size: 1.3rem;
-    color: #f4c542;
-    margin-right: 10px;
-}
-
-/* ================================= */
-/* ✅ Tokenomics Section & Table Fixes */
-/* ================================= */
-
 .tokenomics-section {
-    background: transparent;
-    /* Matches body background */
-    padding: 50px 0;
-    text-align: center;
+  padding: 60px 20px;
+  background-color: #ffffff;
 }
-
-.tokenomics-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-family: 'Scheherazade New', serif;
-    color: #f4c542;
-}
-
-/* ✅ Tokenomics Image */
 .tokenomics-image img {
-    width: 100%;
-    max-width: 1000px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
-    margin-bottom: 20px;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
+  margin-bottom: 20px;
 }
-
-/* ✅ Table Styles - Responsive & Readable */
-/* ✅ Responsive Table Fix */
 .table-container {
-    overflow-x: auto;
-    /* Enables horizontal scrolling on small screens */
-    max-width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
 }
-
-/* ✅ Table Layout Fix */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fff;
-    color: #222;
-    margin: 20px 0;
-    border-radius: 8px;
-    overflow: hidden;
-    display: table;
-    table-layout: fixed;
-    /* Ensures even column distribution */
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  color: #222;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
-
-/* ✅ Adjust column widths */
-th,
-td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    white-space: normal;
-    /* Allows text to wrap properly */
-    word-wrap: break-word;
-    /* Ensures text does not overflow */
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word;
 }
-
-/* ✅ Ensure proper width distribution */
-th:nth-child(1),
-td:nth-child(1) {
-    width: 20%;
-}
-
-/* Category */
-th:nth-child(2),
-td:nth-child(2) {
-    width: 10%;
-}
-
-/* % of Supply */
-th:nth-child(3),
-td:nth-child(3) {
-    width: 15%;
-}
-
-/* Tokens Allocated */
-th:nth-child(4),
-td:nth-child(4) {
-    width: 25%;
-}
-
-/* Purpose */
-th:nth-child(5),
-td:nth-child(5) {
-    width: 30%;
-}
-
-/* Vesting & Release Details */
-
-/* ✅ Table Header */
 th {
-    background: #6b4226;
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
+  background-color: #6b4226;
+  color: #fff;
 }
-
-/* ✅ Improve readability for long text */
-td {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* ✅ Responsive Design */
-@media (max-width: 1024px) {
-
-    th,
-    td {
-        font-size: 0.9rem;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .table-container {
-        display: block;
-        overflow-x: auto;
-        width: 100%;
-    }
-
-    table {
-        display: block;
-        width: 100%;
-    }
-
-    th,
-    td {
-        font-size: 0.9rem;
-        padding: 8px;
-        white-space: nowrap;
-        /* Prevents text from wrapping excessively on small screens */
-    }
-}
-
-
-th {
-    background: #6b4226;
-    color: #fff;
-}
-
 tr:hover {
-    background: rgba(255, 215, 0, 0.2);
+  background-color: #f9f9f9;
 }
-
-/* ================================= */
-/* ✅ Additional Economic Features */
-/* ================================= */
-
 .economic-features {
-    background: #000000;
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    max-width: 800px;
-    margin: 20px auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  background: #fcfcfc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 0;
+  list-style: none;
 }
-
 .economic-features li {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    padding: 10px;
-    background: transparent;
-    border-radius: 5px;
-    line-height: 1.6;
+  padding: 16px 24px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
 }
-
-.economic-features li::before {
-    content: " ";
-    font-size: 1.3rem;
-    color: #f4c542;
+.blank-section {
+  padding: 60px 20px;
+  background-color: #F9F5EE;
 }
-
-/* ================================= */
-/* ✅ Footer - Improved Design */
-/* ================================= */
-
 footer {
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+  background-color: #E3D0B2;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
 }
-
-/* Social Links */
-.social-links a {
-    color: #e9e4df;
-    margin: 0 10px;
-    text-decoration: none;
+footer a {
+  color: #01796F;
+  text-decoration: none;
 }
-
-.social-links a:hover {
-    color: #ee7707;
+footer a:hover {
+  color: #004E48;
 }
-
-/* ================================= */
-/* ✅ Responsive Design Fixes */
-/* ================================= */
-
-@media (max-width: 1024px) {
-    .container {
-        width: 95%;
-    }
-
-    .table-container {
-        overflow-x: auto;
-    }
-
-    table {
-        font-size: 0.9rem;
-    }
-
-    th,
-    td {
-        padding: 8px;
-    }
-}
-
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero-image img {
-        width: 90%;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .btn {
-        padding: 10px 18px;
-        font-size: 1rem;
-    }
-
-    .economic-features {
-        text-align: center;
-    }
+  .two-column {
+    flex-direction: column;
+  }
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
+"""
 
-/* Live Feed Section */
-.live-feed-section {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 50px 20px;
-    text-align: center;
-}
+# Save styles.css
+with open(os.path.join(base_dir, "styles.css"), "w", encoding="utf-8") as f:
+    f.write(styles_css_content)
 
-.live-feed-section h2 {
-    font-size: 2rem;
-    color: #f4c542;
-    margin-bottom: 15px;
-}
+# Create and zip the deployment package
+zip_path = "/mnt/data/Bank_of_Sharia_Website_Deployment_Package.zip"
+with zipfile.ZipFile(zip_path, 'w') as zipf:
+    for root, _, files in os.walk(base_dir):
+        for file in files:
+            file_path = os.path.join(root, file)
+            arcname = os.path.relpath(file_path, base_dir)
+            zipf.write(file_path, arcname=arcname)
 
-.live-feed-section p {
-    font-size: 1.1rem;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.live-feed-container {
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
-}
-
-/* Live Feed Placeholder Section */
-.image-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.live-feed-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
-}
-
-#buy-scgt {
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    text-align: center;
-    font-family: 'Amiri', serif;
-}
-
-.btn {
-    background: #f4c542;
-    color: #000;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    font-size: 1rem;
-}
-
-.btn:hover {
-    background: #d1a537;
-}
-/* ================================= */
-/* ✅ Options Section */
-/* ================================= */
-
-.option1-section {
-    background: #F9F5EE;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.option1-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-family: 'Scheherazade New', serif;
-    color: #5C5346;
-}
-.option2-section {
-    background: #F9F5EE;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.option2-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-family: 'Scheherazade New', serif;
-    color: #5C5346;
-}
-footer {
-    background-color: #E3D0B2;
-    padding: 15px 0;
-    text-align: center;
-    font-size: 14px;
-    margin-top: 40px;
-}
+zip_path
