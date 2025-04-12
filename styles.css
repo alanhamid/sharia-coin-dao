@@ -212,7 +212,7 @@ footer a:hover {
 }
 .blank-section img {
   display: block;
-  max-width: 50%;
+  max-width: 400px;
   min-width: 200px;  /* Prevents the image from shrinking too much */
   height: auto;
   margin: 0 auto;
