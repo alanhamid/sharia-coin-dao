@@ -263,5 +263,11 @@ footer a:hover {
     max-width: 100%;
   }
 }
+@media (max-width: 600px) {
+  .btn {
+    width: auto;
+    max-width: 100%;
+  }
+}
 
 
