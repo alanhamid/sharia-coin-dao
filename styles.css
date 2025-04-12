@@ -107,7 +107,7 @@ ul, li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
+  gap: 20px;
   align-items: center;
 }
 .two-column .hero-text, .two-column .hero-image {
