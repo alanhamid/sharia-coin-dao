@@ -95,11 +95,13 @@ ul, li {
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  display: inline-block;
+  display: inline-block; /* ✅ important */
   margin: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
+  max-width: 300px; /* ✅ prevents it from going full width */
+  text-align: center;
 }
+
 .btn:hover {
   background: #d1a537;
 }
