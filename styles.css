@@ -101,6 +101,12 @@ ul, li {
   max-width: 300px; /* ✅ prevents it from going full width */
   text-align: center;
 }
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
 
 .btn:hover {
   background: #d1a537;
