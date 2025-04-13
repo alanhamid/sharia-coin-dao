@@ -52,7 +52,7 @@ header h1 {
   text-align: center;
 }
 h1 {
-  font-size: 50px;
+  font-size: 75px;
   text-align: center;
   color: #01796F;
   font-family: 'Scheherazade New', serif;
@@ -69,6 +69,16 @@ nav a {
 }
 nav a:hover {
   color: #01796F;
+}
+h2 {
+  font-size: 50px;
+  text-align: center;
+  color: #01796F;
+  font-family: 'Scheherazade New', serif;
+}
+
+h2 span {
+   color: #DAA520; /* Goldenrod */
 }
 h1, h2, h3, h4, h5 {
   font-family: 'Scheherazade New', serif;
