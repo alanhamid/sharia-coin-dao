@@ -1,5 +1,5 @@
 /* Updated on April 17, 2025 */
-css_content = """html, body {
+ {
   font-family: 'Tajawal', sans-serif;
   margin: 0;
   padding: 0;
@@ -13,37 +13,39 @@ css_content = """html, body {
   margin: auto;
 }
 
+/* Navigation Bar Styles */
 .nav-bar-alt {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
-  padding: 20px 0;
-}
-
-.left-links {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.left-links a {
-  margin-right: 15px;
-  font-weight: bold;
-  color: #5C5346;
-  text-decoration: none;
-}
-
-.left-links a:hover {
-  color: #01796F;
+  padding: 15px 40px;
+  background-color: #F9F5EE;
 }
 
 .logo-centered {
-  height: 90px;
-  position: absolute;
+  height: 80px;
+    position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.left-links {
+  display: flex;
+  gap: 15px;
+}
+
+.left-links a {
+  padding: 10px 20px;
+  background-color: #f4c542;
+  color: #1a2a6c;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.left-links a:hover {
+  background-color: #d1a537;
 }
 
 h1, h2 {
