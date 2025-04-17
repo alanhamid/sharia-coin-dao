@@ -126,3 +126,29 @@ footer a {
   color: #01796F;
   text-decoration: none;
 }
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column;
+  }
+
+  .hero-text,
+  .hero-image {
+    width: 100%;
+  }
+
+  .btn {
+    width: auto;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn {
+    width: auto;
+    max-width: 100%;
+  }
+}
