@@ -1,5 +1,4 @@
-/* Updated on April 17, 2025 */
- {
+html, body {
   font-family: 'Tajawal', sans-serif;
   margin: 0;
   padding: 0;
@@ -13,39 +12,39 @@
   margin: auto;
 }
 
-/* Navigation Bar Styles */
 .nav-bar-alt {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 15px 40px;
-  background-color: #F9F5EE;
-}
-
-.logo-centered {
-  height: 80px;
-    position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  padding: 20px 0;
 }
 
 .left-links {
-  display: flex;
-  gap: 15px;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .left-links a {
-  padding: 10px 20px;
-  background-color: #f4c542;
-  color: #1a2a6c;
-  border-radius: 5px;
+  margin-right: 15px;
   font-weight: bold;
+  color: #5C5346;
   text-decoration: none;
-  transition: background-color 0.3s ease;
 }
 
 .left-links a:hover {
-  background-color: #d1a537;
+  color: #01796F;
+}
+
+.logo-centered {
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 h1, h2 {
