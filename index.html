@@ -1,46 +1,58 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bank of Sharia – Premier Islamic Neo Banking</title>
-  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+    }
+    h1, h2 {
+      font-family: 'Scheherazade New', serif;
+    }
+  </style>
 </head>
-<body>
-  <header class="main-header">
-    <div class="container nav-bar-alt">
-      <nav class="left-links">
-        <a href="#buy">Buy $SHARIA</a>
-        <a href="#govern">Buy $SCGT</a>
+<body class="bg-[#F9F5EE] text-[#5C5346]">
+
+  <!-- Navigation Bar -->
+  <header class="bg-[#F9F5EE] py-4 shadow-md">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <img src="images/smallLogo1.png" alt="Bank of Sharia Logo" class="h-20" />
+      <nav class="space-x-4">
+        <a href="#buy" class="bg-yellow-400 text-blue-900 px-4 py-2 rounded hover:bg-yellow-500 font-bold">Buy $SHARIA</a>
+        <a href="#govern" class="bg-yellow-400 text-blue-900 px-4 py-2 rounded hover:bg-yellow-500 font-bold">Buy $SCGT</a>
       </nav>
-      <img src="images/smallLogo1.png" alt="Bank of Sharia Logo" class="logo-centered" />
     </div>
   </header>
 
-  <section class="hero two-column">
-    <div class="hero-text">
-      <h1>Sharia Coin DAO - <span>Bridging Faith and DeFi</span></h1>
-      <p><strong>Our vision is to create a fair and just monetary system for the whole world by integrating Islamic financial ethics (Sharia Compliance) with modern DeFi.</strong></p>
-      <p><strong>Sharia Coin DAO offers more than just a token and payment cards — It’s a community, a utility platform, and a bridge between Islamic banking and decentralized finance.</strong></p>
-      <div class="cta-buttons">
-        <a href="#buy" class="btn">Invest & Govern</a>
-        <a href="#donate" class="btn">Provide Liquidity</a>
-        <a href="#donate" class="btn">Donate</a>
-        <a href="https://shariadebitcard.org/" class="btn" target="_blank">Reserve Debit Card</a>
+  <!-- Hero Section -->
+  <section class="bg-[#EFE6D8] py-16">
+    <div class="container mx-auto flex flex-col md:flex-row items-center px-4 gap-10">
+      <div class="md:w-1/2">
+        <h1 class="text-5xl text-[#01796F] font-bold mb-4">Sharia Coin DAO - <span class="text-[#DAA520]">Bridging Faith and DeFi</span></h1>
+        <p class="text-lg mb-4 font-semibold">Our vision is to create a fair and just monetary system for the whole world by integrating Islamic financial ethics (Sharia Compliance) with modern DeFi.</p>
+        <p class="text-lg mb-6 font-semibold">Sharia Coin DAO offers more than just a token and payment cards — It’s a community, a utility platform, and a bridge between Islamic banking and decentralized finance.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#buy" class="bg-yellow-400 text-blue-900 px-4 py-2 rounded hover:bg-yellow-500 font-bold">Invest & Govern</a>
+          <a href="#donate" class="bg-yellow-400 text-blue-900 px-4 py-2 rounded hover:bg-yellow-500 font-bold">Provide Liquidity</a>
+          <a href="#donate" class="bg-yellow-400 text-blue-900 px-4 py-2 rounded hover:bg-yellow-500 font-bold">Donate</a>
+          <a href="https://shariadebitcard.org/" class="bg-yellow-400 text-blue-900 px-4 py-2 rounded hover:bg-yellow-500 font-bold" target="_blank">Reserve Debit Card</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-image">
-      <img src="Feature1.jpg" alt="DAO"/>
+      <div class="md:w-1/2">
+        <img src="Feature1.jpg" alt="DAO" class="rounded-lg shadow-lg max-w-full" />
+      </div>
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <p>Follow us: <a href="https://x.com/ShariaCoinDAO" target="_blank">Twitter</a></p>
-      <p>&copy; 2025 Sharia Coin DAO. Owned by <a href="https://blokketensolutions.com" target="_blank">Blokketen Solutions</a></p>
-    </div>
+  <!-- Footer -->
+  <footer class="bg-[#E3D0B2] py-6 text-center text-sm">
+    <p>Follow us: <a href="https://x.com/ShariaCoinDAO" target="_blank" class="text-[#01796F] underline">Twitter</a></p>
+    <p>&copy; 2025 Sharia Coin DAO. Owned by <a href="https://blokketensolutions.com" class="text-[#01796F] underline" target="_blank">Blokketen Solutions</a></p>
   </footer>
+
 </body>
 </html>
