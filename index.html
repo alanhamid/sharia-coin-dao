@@ -104,23 +104,34 @@
         <li><strong>Blockchain:</strong> Solana</li>
       </ul>
       <!-- Image thumbnail -->
-        <img src="images/sharia_tokenomics_chart.png" alt="Sharia Tokenomics" class="tokenomics_chart" onclick="openLightbox()" />
-        <!-- Lightbox -->
-        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-          <span class="lightbox-close">&times;</span>
-          <img class="lightbox-content" id="enlargedImg" src="images/sharia_tokenomics_chart.png" alt="Tokenomics Full View">
-        </div>
-        
-        <!-- JavaScript -->
-        <script>
-          function openLightbox() {
-            document.getElementById("lightbox").style.display = "block";
-          }
-        
-          function closeLightbox() {
-            document.getElementById("lightbox").style.display = "none";
-          }
-        </script>
+        <!-- ✅ Chart Thumbnail -->
+<div class="tokenomics-chart-wrapper">
+  <img src="images/sharia_tokenomics_chart.png" 
+       alt="Tokenomics Chart" 
+       class="tokenomics-chart"
+       onclick="openLightbox()" />
+</div>
+
+<!-- ✅ Lightbox Modal -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-content" 
+       id="enlargedImg" 
+       src="images/sharia_tokenomics_chart_clean.png" 
+       alt="Tokenomics Full View">
+</div>
+
+<!-- ✅ JS -->
+<script>
+  function openLightbox() {
+    document.getElementById("lightbox").style.display = "block";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+
 
     </div>
   </section>
@@ -156,8 +167,14 @@
 
 </body>
 <style>
+  .tokenomics-chart-wrapper {
+    text-align: center;
+    margin-top: 40px;
+  }
+
   .tokenomics-chart {
-    max-width: 100px;
+    width: 50%;
+    max-width: 400px;
     cursor: pointer;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -171,14 +188,14 @@
   .lightbox {
     display: none;
     position: fixed;
-    z-index: 999;
+    z-index: 9999;
     padding-top: 50px;
     left: 0;
     top: 0;
-    width: 50%;
-    height: 50%;
-    overflow: auto;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0,0,0,0.85);
+    overflow: auto;
   }
 
   .lightbox-content {
@@ -197,7 +214,14 @@
     font-weight: bold;
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    .tokenomics-chart {
+      width: 80%;
+    }
+  }
 </style>
+
 
 
 </html>
