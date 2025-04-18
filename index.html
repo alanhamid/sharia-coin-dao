@@ -103,6 +103,26 @@
         <li><strong>Symbol:</strong> SHARIA</li>
         <li><strong>Blockchain:</strong> Solana</li>
       </ul>
+      <!-- Image thumbnail -->
+<img src="images/sharia_tokenomics_chart_clean.png" alt="Sharia Tokenomics" class="tokenomics-chart" onclick="openLightbox()" />
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+          <span class="lightbox-close">&times;</span>
+          <img class="lightbox-content" id="enlargedImg" src="images/sharia_tokenomics_chart.png" alt="Tokenomics Full View">
+        </div>
+        
+        <!-- JavaScript -->
+        <script>
+          function openLightbox() {
+            document.getElementById("lightbox").style.display = "block";
+          }
+        
+          function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+          }
+        </script>
+
       <img src="images/sharia_tokenomics_chart.png" alt="Tokenomics Chart" class="rounded-lg shadow-lg mx-auto max-w-lg" />
     </div>
   </section>
