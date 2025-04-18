@@ -157,4 +157,48 @@
   </footer>
 
 </body>
+  <style>
+  .tokenomics-chart {
+    max-width: 400px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+  }
+
+  .tokenomics-chart:hover {
+    transform: scale(1.03);
+  }
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.85);
+  }
+
+  .lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+
 </html>
