@@ -49,12 +49,12 @@
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
       <div class="md:w-1/2">
         <h2 class="text-2xl font-bold text-center text-[#01796F] mb-4">For the next 100 years, the DAO is committed to empower the MENA region via DAO's Sadeqah Jariyah Fund. Learn more about it in our whitepaper.</h2>
-      <div class="tokenomics-chart-wrapper">
-          <img src="images/SteamflowDashboard.png" 
-               alt="Sadqah Jariyah Fund" 
-               class="tokenomics-chart cursor-pointer"
-               onclick="openLightbox()" />
-        </div>        
+    <div class="tokenomics-chart-wrapper">
+      <img src="images/SteamflowDashboard.png" 
+           alt="Sadqah Jariyah Fund" 
+           class="tokenomics-chart cursor-pointer"
+           onclick="openLightbox('images/SteamflowDashboard.png')" />
+    </div>   
       </div>
      <div class="md:w-1/2">
         <img src="images/FrontShirtPrint2.png" alt="DAO" class="rounded-lg shadow-lg mx-auto max-w-xs" />
@@ -109,7 +109,7 @@
           <img src="images/sharia_tokenomics_chart.png" 
                alt="Tokenomics Chart" 
                class="tokenomics-chart cursor-pointer"
-               onclick="openLightbox()" />
+               onclick="openLightbox('images/sharia_tokenomics_chart.png')" />
         </div>
       </div>
 
@@ -143,13 +143,36 @@
 
 <!-- ✅ JS -->
 <script>
-  function openLightbox() {
-    document.getElementById("lightbox").style.display = "block";
-  }
+function openLightbox(imageSrc) {
+  const lightbox = document.createElement('div');
+  lightbox.id = 'lightbox';
+  lightbox.style.position = 'fixed';
+  lightbox.style.top = '0';
+  lightbox.style.left = '0';
+  lightbox.style.width = '100%';
+  lightbox.style.height = '100%';
+  lightbox.style.backgroundColor = 'rgba(0,0,0,0.8)';
+  lightbox.style.display = 'flex';
+  lightbox.style.justifyContent = 'center';
+  lightbox.style.alignItems = 'center';
+  lightbox.style.zIndex = '1000';
 
-  function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-  }
+  const img = document.createElement('img');
+  img.src = imageSrc;
+  img.style.maxWidth = '90%';
+  img.style.maxHeight = '90%';
+  img.style.borderRadius = '8px';
+  img.style.boxShadow = '0 0 20px rgba(255,255,255,0.5)';
+
+  lightbox.appendChild(img);
+
+  document.body.appendChild(lightbox);
+
+  lightbox.addEventListener('click', () => {
+    document.body.removeChild(lightbox);
+  });
+}
+
 </script>
 
 
