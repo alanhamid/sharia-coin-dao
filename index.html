@@ -48,6 +48,64 @@
         <img src="smallrebuildpalestine1.1.jpg" alt="DAO" class="rounded-lg shadow-lg mx-auto max-w-xs" />
       </div>
     </div>
+	  <!-- ✅ Lightbox Modal -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-content" 
+       id="enlargedImg" 
+       src="images/sharia_tokenomics_chart.png" 
+       alt="Tokenomics Full View">
+</div>
+<!-- ✅ JS -->
+<script>
+function openLightbox(imageSrc) {
+  const lightbox = document.createElement('div');
+  lightbox.id = 'lightbox';
+  lightbox.style.position = 'fixed';
+  lightbox.style.top = '0';
+  lightbox.style.left = '0';
+  lightbox.style.width = '100%';
+  lightbox.style.height = '100%';
+  lightbox.style.backgroundColor = 'rgba(0,0,0,0.8)';
+  lightbox.style.display = 'flex';
+  lightbox.style.justifyContent = 'center';
+  lightbox.style.alignItems = 'center';
+  lightbox.style.zIndex = '1000';
+
+  const img = document.createElement('img');
+  img.src = imageSrc;
+  img.style.maxWidth = '90%';
+  img.style.maxHeight = '90%';
+  img.style.borderRadius = '8px';
+  img.style.boxShadow = '0 0 20px rgba(255,255,255,0.5)';
+
+  lightbox.appendChild(img);
+
+  document.body.appendChild(lightbox);
+
+  lightbox.addEventListener('click', () => {
+    document.body.removeChild(lightbox);
+  });
+}
+
+</script>
+
+
+    </div>
+  </section>
+  
+ <!-- Rewards Section -->
+  <section class="bg-[#F9F5EE] py-16">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+      <div class="md:w-1/2">
+<h2 class="text-2xl font-bold text-[#01796F] mb-8">To Learn More,<a href="https://shariadebitcard.org/#sjf" class="underline text-blue-600 hover:text-blue-800" target="_blank"> Click Here</a>  </h2>    <div class="tokenomics-chart-wrapper">
+        <p class="mb-6 text-center text-lg font-semibold ">Click the image to enlarge it</p>
+      <img src="images/SteamflowDashboard.png" 
+           alt="Sadqah Jariyah Fund" 
+           class="tokenomics-chart cursor-pointer"
+           onclick="openLightbox('images/SteamflowDashboard.png')" />
+    </div>   
+      </div>
   </section> 
 <!-- ✅ Lightbox Modal -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
